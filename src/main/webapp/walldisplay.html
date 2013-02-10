@@ -168,8 +168,8 @@
 					var longestJob = getLongestJob(jobsToDisplay, showBuildNumber, showDetails);
 					var maxFontSize = 0;
 
-					for (var columnCount = 1; columnCount <= jobsToDisplay.length; columnCount++) {
-						for (var fontSize = 10; fontSize <= 302; fontSize++) {
+					for (var columnCount = 1; columnCount <= 2; columnCount++) {
+						for (var fontSize = 10; fontSize <= 100; fontSize+=2) {
 
 							var rowCount = Math.ceil(jobsToDisplay.length /  columnCount);
 
