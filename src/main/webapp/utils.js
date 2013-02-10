@@ -131,7 +131,12 @@ function getJobTitle(job) {
 function getJobText(job, showBuildNumber, showDetails) {
 
 	var jobText = getJobTitle(job);
-
+		
+	if (job.lastBuild != null && job.lastBuild.timestamp != null)
+	{
+		jobText += " <font color='black'>" + $.format.date(new Date(job.lastBuild.timestamp), "d MMM yyyy HH:mm" + "</font>");
+	}	
+	
       if (showBuildNumber && job.lastBuild != null && job.lastBuild.number != null)
       {
 	  jobText += ' #' + job.lastBuild.number;
